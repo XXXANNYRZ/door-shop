@@ -1,0 +1,1606 @@
+:root {
+    --font-family: "Montserrat", sans-serif;
+    --second-family: "Roboto", sans-serif;
+    --third-family: "Arial", sans-serif;
+    --font4: "Verdana", sans-serif;
+
+    --color-primary: #333;
+    --color-secondary: #666;
+    --color-accent: #5b7a74;
+    --color-background: #fff;
+    --color-header-bg: #BFBFBF;
+    --color-footer-bg: #BFBFBF;
+    --color-button-bg: #779F96;
+    --color-button-hover: #5b7a74;
+    --color-text-light: #fff;
+    --color-text-dark: #000;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto; /* Убедитесь, что вертикальная прокрутка включена */
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-primary);
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto; /* Убедитесь, что вертикальная прокрутка включена */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Header */
+header {
+    height: 6.25rem;
+    background-color: var(--color-background);
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    
+}
+
+.top-bar {
+    background-color: var(--color-header-bg);
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.25rem; /* Уменьшили padding */
+    position: relative;
+}
+
+.logo img {
+    height: 4.75rem;
+    width: 4.75rem;
+    margin-top: 0.5rem;
+}
+
+.company-appellation {
+    flex: 1;
+    text-align: center;
+    color: var(--color-text-dark);
+}
+
+.appellation {
+    font-size: 2.5rem; /* Уменьшили размер шрифта */
+    font-weight: 200;
+    margin: 0;
+}
+
+.company-info {
+    flex: 0 0 auto;
+    text-align: right;
+    color: var(--color-text-dark);
+}
+
+.company-name,
+.phone-number {
+    font-size: 0.75rem; /* Уменьшили размер шрифта */
+    margin: 0.0625rem 0 0; /* Уменьшили margin */
+    font-weight: 500;
+}
+
+.phone-number img {
+    width: 0.982rem;
+    height: 0.982rem;
+    margin-right: 0.5rem; /* Уменьшили margin */
+}
+
+/* Header - адаптив */
+@media (max-width: 1000px) {
+    .top-bar {
+        padding: 0 1.5rem;
+    }
+
+    .appellation {
+        font-size: 2rem;
+    }
+
+    .company-name,
+    .phone-number {
+        font-size: 0.75rem;
+    }
+}
+
+/* Основные стили для навигации */
+nav.main-nav {
+    background-color: #fff;
+    height: 3.625rem; /* 58px */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+    z-index: 999;
+}
+
+nav.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav.main-nav ul li {
+    font-weight: 500;
+    margin: 0 3rem; /* 45px */
+}
+
+nav.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem; /* 16px */
+    transition: color 0.3s ease;
+}
+
+nav.main-nav ul li a:hover {
+    color: #5b7a74;
+}
+
+.burger-menu{
+    display: none;
+}
+
+@media (max-width:1958px) {
+    nav.main-nav ul li {
+        font-weight: 500;
+        margin: 0 1.5rem; /* 45px */
+    }
+    
+    nav.main-nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1.2rem; /* 16px */
+        transition: color 0.3s ease;
+    }
+}
+
+@media (max-width:1574px) {
+    nav.main-nav ul li {
+        font-weight: 500;
+        margin: 0 1.5rem; /* 45px */
+    }
+    
+    nav.main-nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1rem; /* 16px */
+        transition: color 0.3s ease;
+    }
+}
+
+@media (max-width:1376px) {
+    nav.main-nav ul li {
+        font-weight: 500;
+        margin: 0 1.2rem; /* 45px */
+    }
+    
+    nav.main-nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 0.8rem; /* 16px */
+        transition: color 0.3s ease;
+    }
+}
+
+@media (max-width:1102px) {
+    nav.main-nav ul li {
+        font-weight: 500;
+        margin: 0 0.8rem; /* 45px */
+    }
+    
+    nav.main-nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 0.8rem; /* 16px */
+        transition: color 0.3s ease;
+    }
+}
+
+/* Фиксация header и меню только на экранах от 1001px и шире */
+@media (min-width: 1001px) {
+    header {
+        position: fixed; /* Фиксируем header */
+    }
+
+    nav.main-nav {
+        position: fixed; /* Фиксируем меню */
+        top: 6.25rem; /* Отступ сверху равен высоте header */
+    }
+}
+
+
+/* Бургерное меню - адаптив */
+@media (max-width: 1000px) {
+    nav.main-nav {
+        display: none; /* Скрываем обычное меню на маленьких экранах */
+    }
+
+    .menu-toggle {
+        display: flex; /* Показываем кнопку бургерного меню */
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.625rem;
+        z-index: 1001;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 1.563rem;
+        height: 1.125rem;
+    }
+
+    .menu-icon .bar {
+        width: 100%;
+        height: 0.188rem;
+        background-color: var(--color-primary);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .close-icon {
+        display: none;
+        font-size: 1.5rem;
+        color: var(--color-primary);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1002; /* Добавлено */
+    }
+
+    .menu-toggle.active .menu-icon .bar:nth-child(1) {
+        transform: rotate(45deg) translate(0.313rem, 0.313rem);
+    }
+
+    .menu-toggle.active .menu-icon .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .menu-icon .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(0.313rem, -0.313rem);
+    }
+
+    .menu-toggle.active .close-icon {
+        display: block;
+    }
+
+    .menu-toggle.active .menu-icon {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex; /* По умолчанию бургерное меню скрыто */
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-background); /* Уберите прозрачность */
+        background-image: url('images/products_bg.png');
+        background-size: cover;
+        background-position: center;
+        transition: top 0.5s ease;
+        z-index: 1000;
+        overflow-y: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .burger-menu.active {
+        top: 0; /* Показываем бургерное меню при активации */
+    }
+
+    .burger-menu ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .burger-menu ul li {
+        margin: 1.5rem 0;
+    }
+
+    .burger-menu ul li a {
+        color: var(--color-text-dark);
+        font-size: 1.0rem;
+        transition: color 0.3s ease;
+    }
+
+    .burger-menu ul li a:hover {
+        color: var(--color-accent);
+    }
+}
+
+/* Отключаем скролл страницы при открытом меню */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Скрываем иконку бургерного меню на больших экранах */
+@media (min-width: 1001px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Герой-секция */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('images/main_background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 18.25rem;
+}
+
+.cta-buttons button {
+    font-weight: 600;
+    background-color: #D9D9D9;
+    color: var(--color-text-dark);
+    border: none;
+    padding: 1.875rem 3.75rem;
+    border-radius: 1.563rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-buttons button:hover {
+    background-color: var(--color-accent);
+    box-shadow: 0 0.375rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+/* Герой-секция - адаптив */
+@media (max-width: 1000px) {
+    .hero {
+        height: 40rem;
+    }
+
+    .appellation{
+        font-size: 2rem;
+    }
+
+    .company-info{
+        display: none;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 4rem;
+    }
+
+    .cta-buttons button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .logo{
+        display: none;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .cta-buttons button {
+        padding: 2rem 2.5rem;
+        font-size: 1rem;
+    }
+
+}
+
+/* Секции: Продукты и Услуги */
+.products-section,
+.services-section {
+    background-image: url('images/products_bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 0 4.688rem;
+    text-align: center;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-section h2,
+.services-section h2 {
+    font-size: 2.25rem;
+    color: var(--color-primary);
+    margin-bottom: 2.5rem;
+}
+
+.product-container,
+.service-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.product-card,
+.service-card {
+    background-color: rgb(211, 211, 211);
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    width: 100%; /* Занимает всю ширину слайда */
+    padding: 1.25rem;
+    text-align: left;
+    margin: 0 auto; /* Центрирование карточки */
+}
+
+.product-card img,
+.service-card img {
+    width: 100%;
+    border-radius: 0.625rem;
+    margin-bottom: 0.938rem;
+}
+
+.product-card h3,
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 0.625rem;
+}
+
+.product-card p,
+.service-card p {
+    font-size: 1rem;
+    color: var(--color-secondary);
+    margin-bottom: 0.938rem;
+}
+
+.product-card .price,
+.service-card .price {
+    font-size: 1.25rem;
+    color: var(--color-text-dark);
+    margin-bottom: 1.25rem;
+}
+
+.product-card button,
+.service-card button {
+    background-color: var(--color-button-bg);
+    color: var(--color-text-light);
+    border: none;
+    padding: 0.625rem 4.375rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover,
+.service-card button:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* Секции: Продукты и Услуги - адаптив */
+@media (max-width: 1480px) and (min-width: 1024px){
+    .products-section,
+    .services-section {
+        padding: 0 2rem;
+        height: 45rem;
+    }
+
+    .products-section h2,
+    .services-section h2 {
+        font-size: 2.25rem;
+    }
+
+    .product-container,
+    .service-container {
+        gap: 1rem;
+    }
+
+    .product-card,
+    .service-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .product-card button, .service-card button{
+        width: 100%;
+    }
+}
+
+/* Секции: Продукты и Услуги - адаптив */
+@media (max-width: 1023px) and (min-width: 1001px){
+    .products-section,
+    .services-section {
+        padding: 0 2rem;
+        height: 45rem;
+    }
+
+    .products-section h2,
+    .services-section h2 {
+        font-size: 2.25rem;
+    }
+
+    .product-container,
+    .service-container {
+        gap: 1rem;
+    }
+
+    .product-card,
+    .service-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .product-card button, .service-card button{
+        width: 100%;
+    }
+}
+
+/* Секции: Продукты и Услуги - адаптив */
+@media (max-width: 1000px) {
+    .products-section,
+    .services-section {
+        padding: 0 2rem;
+        height: 40rem;
+    }
+
+    .products-section h2,
+    .services-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .product-container,
+    .service-container {
+        gap: 1rem;
+    }
+
+    .product-card,
+    .service-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .product-card h3,
+    .service-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .product-card p,
+    .service-card p {
+        font-size: 0.875rem;
+    }
+
+    .product-card .price,
+    .service-card .price {
+        font-size: 1rem;
+    }
+
+    .product-card button,
+    .service-card button {
+        padding: 0.5rem 3rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 767px) {
+    .product-card,
+    .service-card {
+        padding: 1rem; /* Уменьшаем отступы */
+        width: 70%;
+    }
+
+    .product-card h3,
+    .service-card h3 {
+        font-size: 1.25rem; /* Уменьшаем размер заголовка */
+    }
+
+    .product-card p,
+    .service-card p {
+        font-size: 0.875rem; /* Уменьшаем размер текста */
+    }
+
+    .product-card .price,
+    .service-card .price {
+        font-size: 1rem; /* Уменьшаем размер цены */
+    }
+
+    .product-card button,
+    .service-card button {
+        padding: 0.5rem 2rem; /* Уменьшаем размер кнопки */
+        font-size: 0.875rem; /* Уменьшаем размер текста кнопки */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card,
+    .service-card {
+        width: 100%; /* Занимает всю ширину на очень маленьких экранах */
+        padding: 1rem; /* Уменьшаем отступы */
+    }
+}
+
+/* Стили для карточек товаров и услуг */
+.product-card,
+.service-card {
+    background-color: rgb(211, 211, 211);
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    width: 100%; /* Занимает всю ширину слайда */
+    padding: 1.25rem;
+    text-align: left;
+    margin: 0 auto; /* Центрирование карточки */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+/* Адаптация для больших экранов (2560px и больше) */
+@media (min-width: 2560px) {
+    .product-card,
+    .service-card {
+        max-width: 28rem; /* Ограничиваем максимальную ширину */
+    }
+}
+
+/* Адаптация для экранов 1440px–2560px */
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .product-card,
+    .service-card {
+        max-width: 28rem; /* Ограничиваем максимальную ширину */
+    }
+}
+
+/* Адаптация для экранов 1024px–1440px */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .product-card,
+    .service-card {
+        max-width: 28rem; /* Ограничиваем максимальную ширину */
+    }
+}
+
+/* Адаптация для экранов 850px–1024px */
+@media (min-width: 850px) and (max-width: 1023px) {
+    .product-card,
+    .service-card {
+        max-width: 22rem; /* Ограничиваем максимальную ширину */
+    }
+}
+
+/* Адаптация для экранов 650px–850px */
+@media (min-width: 650px) and (max-width: 849px) {
+    .product-card,
+    .service-card {
+        max-width: 22rem; /* Ограничиваем максимальную ширину */
+    }
+}
+
+/* Адаптация для экранов 480px–650px */
+@media (min-width: 420px) and (max-width: 649px) {
+    .product-card,
+    .service-card {
+        max-width: 22rem; /* Ограничиваем максимальную ширину */
+    }
+}
+
+/* Адаптация для экранов меньше 480px */
+@media (max-width: 420px) {
+    .product-card,
+    .service-card {
+        max-width: 100%; /* Занимает всю ширину */
+        padding: 1rem; /* Уменьшаем отступы */
+    }
+}
+
+/* Секция: Преимущества */
+.advantages-section {
+    background-image: url('images/products_bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 3.125rem 1.25rem 0;
+    text-align: center;
+    height: 37rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.advantages-section h2 {
+    font-size: 2.25rem;
+    color: var(--color-primary);
+    margin-bottom: 0.625rem;
+}
+
+.advantages-section .subtitle {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 3.75rem;
+    font-weight: 300;
+}
+
+.advantages-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три карточки в ряд */
+    gap: 1.4rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.advantage-card {
+    position: relative;
+    width: 50%;
+    height: 21.875rem;
+    flex: 0 0 auto;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.advantage-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.advantage-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-text-light);
+}
+
+.advantage-card .overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+    font-weight: 300;
+}
+
+.advantage-card .overlay p {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Секция: Преимущества - адаптив */
+@media (max-width: 1000px) {
+    .advantages-section {
+        height: auto; /* Автоматическая высота */
+        padding: 2rem 1rem; /* Уменьшаем отступы */
+    }
+
+    .advantages-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .advantages-section .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .advantages-container {
+        grid-template-columns: repeat(2, 1fr); /* Две карточки в ряд */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .advantage-card {
+        width: 100%;
+        height: 18rem; /* Уменьшаем высоту карточек */
+    }
+
+    .advantage-card .overlay h3 {
+        font-size: 1.25rem;
+    }
+
+    .advantage-card .overlay p {
+        font-size: 0.875rem;
+    }
+}
+
+/* Адаптация для экранов меньше 768px */
+@media (max-width: 768px) {
+    .advantages-container {
+        grid-template-columns: 1fr; /* Одна карточка в ряд */
+    }
+}
+
+/* Стили для карточек преимуществ */
+.advantage-card {
+    position: relative;
+    width: 100%;
+    height: 21.875rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Секция: О нас */
+.about-section {
+    background-image: url('images/products_bg.png');
+    padding: 3.125rem 1.25rem;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.25rem;
+    color: var(--color-primary);
+    margin-bottom: 2.5rem;
+}
+
+.about-container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    background-color: var(--color-header-bg);
+    border-radius: 0.625rem;
+    padding: 1.875rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    margin-bottom: 1.25rem;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: var(--color-primary);
+    margin-bottom: 1.875rem;
+    line-height: 1.6;
+}
+
+.about-text .more-button {
+    background-color: var(--color-button-bg);
+    color: var(--color-text-light);
+    border: none;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    transition: background-color 0.3s ease;
+}
+
+.about-text .more-button:hover {
+    background-color: var(--color-button-hover);
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 0.625rem;
+    object-fit: cover;
+}
+
+/* Секция: О нас - адаптив */
+@media (max-width: 1000px) {
+    .about-section {
+        padding: 2rem 1rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 0.875rem;
+    }
+
+    .about-text .more-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+}
+
+/* Секция: Связь с нами */
+.contact-form-section {
+    background-image: url('images/products_bg.png');
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    text-align: center;
+    height: 30rem; /* 480px */
+}
+
+.contact-form-section h2 {
+    font-size: 2.25rem; /* 36px */
+    color: var(--color-primary);
+    margin-top: 0.625rem; /* 10px */
+    margin-bottom: 2.125rem; /* 34px */
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    width: 100%; /* Занимает всю ширину */
+    max-width: 73.188rem; /* Ограничиваем максимальную ширину */
+    margin: 0 auto; /* Центрирование */
+    padding: 0 1rem; /* Отступы слева и справа */
+}
+
+.input-row {
+    display: flex;
+    gap: 0.2rem; /* Расстояние между полями */
+    margin-bottom: 0.2rem; /* Отступ снизу */
+}
+
+.input-row input {
+    width: 100%; /* Занимает всю ширину */
+    height: 3.75rem;
+    padding: 0.625rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+textarea {
+    width: 100%; /* Занимает всю ширину */
+    height: 14.813rem;
+    padding: 0.625rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.contact-form button {
+    width: 100%; /* Занимает всю ширину */
+    height: 3.75rem; /* 60px */
+    background-color: var(--color-button-bg);
+    color: var(--color-text-light);
+    border: none;
+    font-size: 1rem; /* 16px */
+    cursor: pointer;
+    margin: 0 auto; /* Центрирование кнопки */
+}
+
+.contact-form button:hover {
+    background-color: var(--color-button-hover);
+}
+
+.input-row input:focus,
+textarea:focus {
+    box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.1); /* Легкая тень при фокусе */
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 768px) {
+
+    .contact-form-section{
+        height: 35rem;
+    }
+
+    .input-row {
+        flex-direction: column; /* Поля в столбик */
+        gap: 0.2rem;
+    }
+
+    .input-row input,
+    textarea {
+        width: 100%; /* Занимают всю ширину */
+    }
+
+    .contact-form button {
+        width: 100%; /* Занимает всю ширину */
+    }
+}
+
+/* Секция: Контакты */
+.contacts-section {
+    background-image: url('images/products_bg.png');
+    padding: 3.125rem 1.25rem; /* 50px 20px */
+    text-align: center;
+}
+
+.contacts-section h2 {
+    font-size: 2.25rem; /* 36px */
+    color: var(--color-primary);
+    margin-bottom: 2.5rem; /* 40px */
+}
+
+.contacts-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1rem; /* Отступы слева и справа */
+}
+
+/* Левый блок: Контактная информация */
+.contact-info {
+    background-color: var(--color-header-bg);
+    padding: 2.5rem; /* 40px */
+    width: 40%;
+    text-align: left;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.contact-info h3 {
+    font-size: 1.5rem; /* 24px */
+    color: var(--color-primary);
+    margin-bottom: 1.25rem; /* 20px */
+    text-transform: uppercase;
+}
+
+.contact-info .address {
+    font-size: 1.125rem; /* 18px */
+    color: var(--color-secondary);
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.contact-info .email {
+    font-size: 1.125rem; /* 18px */
+    color: var(--color-secondary);
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.contact-info .social-text {
+    font-size: 1rem; /* 16px */
+    color: var(--color-primary);
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.social-icons {
+    justify-content: center;
+    display: flex;
+    gap: 0.625rem; /* 10px */
+}
+
+.social-icons img {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+}
+
+/* Правый блок: Карта */
+.contact-map {
+    width: 60%;
+    height: 25rem; /* 400px */
+    background-color: #ddd;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Секция: Контакты - адаптив*/
+@media (max-width: 1000px) {
+    .contacts-section {
+        padding: 2rem 1rem;
+    }
+
+    .contacts-section h2 {
+        font-size: 1.75rem; /* 28px */
+    }
+
+    .contacts-container {
+        flex-direction: column; /* Блоки в столбик */
+    }
+
+    .contact-info {
+        width: 100%; /* Занимает всю ширину */
+        padding: 1.5rem; /* Уменьшаем отступы */
+    }
+
+    .contact-map {
+        width: 100%; /* Занимает всю ширину */
+        height: 20rem; /* Уменьшаем высоту */
+    }
+}
+
+/* Футер */
+.footer {
+    height: 7.5rem; /* 120px */
+    background-color: var(--color-footer-bg);
+    padding: 1.25rem 0; /* 20px */
+    color: var(--color-text-dark);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 75rem; /* 1200px */
+    margin: 0 auto;
+    padding: 0 1.25rem; /* 20px */
+}
+
+/* Логотип */
+.footer-logo {
+    padding-right: 1.563rem; /* 25px */
+}
+
+.footer-logo img {
+    height: 4.5rem; /* 60px */
+    width: 4.5rem; /* 60px */
+}
+
+/* Меню по центру */
+.footer-links {
+    display: flex;
+    gap: 3.125rem; /* 50px */
+    justify-content: center;
+}
+
+.footer-menu, .footer-services, .footer-contacts {
+    text-align: left;
+}
+
+.footer-menu p, .footer-services p, .footer-contacts p {
+    font-size: 0.875rem; /* 14px */
+    font-weight: bold;
+    margin: 0 0 0.313rem; /* 5px */
+}
+
+.footer-menu a, .footer-services a, .footer-contacts a {
+    font-size: 0.875rem; /* 14px */
+    color: var(--color-primary);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.188rem; /* 3px */
+}
+
+/* Информация справа */
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.footer-text {
+    font-size: 0.625rem; /* 10px */
+    text-align: left;
+    padding-left: 4.75rem; /* 300px */
+}
+
+.footer-text .privacy-policy {
+    font-size: 0.625rem; /* 10px */
+}
+
+.footer-phone {
+    font-size: 0.625rem; /* 10px */
+}
+
+.footer-phone .phone-description {
+    font-size: 0.625rem; /* 10px */
+    margin-top: 0.188rem; /* 3px */
+}
+
+/* Футер - адаптив*/
+@media (max-width: 1000px) {
+    .footer {
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .footer-logo {
+        display: none;
+    }
+
+    .footer-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px){
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-links {
+        flex-direction: column; /* Меню в столбик */
+        gap: 1.5rem;
+    }
+}
+
+/* Стили для модальных окон */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 1.25rem; /* 20px */
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 31.25rem; /* 500px */
+    border-radius: 0.625rem; /* 10px */
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 1.75rem; /* 28px */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Стили для формы */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem; /* 10px */
+}
+
+.modal-content input {
+    padding: 0.625rem; /* 10px */
+    border: 1px solid #ccc;
+    border-radius: 0.313rem; /* 5px */
+    font-size: 1rem; /* 16px */
+}
+
+.modal-content button {
+    padding: 0.625rem; /* 10px */
+    background-color: #779F96;
+    color: white;
+    border: none;
+    border-radius: 0.313rem; /* 5px */
+    cursor: pointer;
+    font-size: 1rem; /* 16px */
+}
+
+.modal-content button:hover {
+    background-color: #5b7a74;
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 20% auto; /* Увеличиваем отступ сверху */
+        padding: 1rem; /* Уменьшаем отступы */
+        width: 65%; /* Увеличиваем ширину */
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem; /* Уменьшаем размер заголовка */
+    }
+
+    .modal-content input,
+    .modal-content textarea,
+    .modal-content button {
+        font-size: 0.875rem; /* Уменьшаем размер текста */
+    }
+}
+
+/* Стили для слайдеров */
+.swiper-container {
+    width: 45%; /* Занимает всю ширину контейнера */
+    margin: 0 auto; /* Центрирование */
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.swiper-slide {
+    flex: 0 0 auto;
+    width: 100%; /* Ширина слайда по умолчанию */
+    margin-right: 1rem; /* Расстояние между слайдами */
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: 0.5rem;
+}
+
+.swiper-button-prev {
+    left: 0.5rem;
+}
+
+/* Адаптация для экранов больше 2560px */
+@media (min-width: 2560px) {
+    .swiper-container {
+        width: 1100px; /* Уменьшаем ширину слайдера */
+        max-width: 1400px; /* Ограничиваем максимальную ширину */
+    }
+}
+
+/* Адаптация для больших экранов */
+@media (min-width: 1200px) {
+    .swiper-container {
+        width: 1100px; /* Уменьшаем ширину слайдера */
+        max-width: 1400px; /* Ограничиваем максимальную ширину */
+    }
+    .swiper-slide {
+        width: 30%; /* Три слайда в ряд */
+    }
+}
+
+/* Адаптация для средних экранов */
+@media (max-width: 1199px) and (min-width: 1000px) {
+    .swiper-container {
+        width: 100%; /* Занимает всю ширину контейнера */
+        margin: 0 auto; /* Центрирование */
+        overflow: hidden;
+        position: relative;
+    }
+    .swiper-slide {
+        width: 45%; /* Два слайда в ряд */
+    }
+}
+
+@media (max-width: 999px){
+    .swiper-container {
+        width: 740px; /* Занимает всю ширину контейнера */
+        margin: 0 auto; /* Центрирование */
+        overflow: hidden;
+        position: relative;
+    }
+    .swiper-slide {
+        width: 45%; /* Два слайда в ряд */
+    }
+}
+
+@media (max-width: 802px) and (min-width: 769px){
+    .swiper-container {
+        width: 100%; /* Занимает всю ширину контейнера */
+        margin: 0 auto; /* Центрирование */
+        overflow: hidden;
+        position: relative;
+    }
+    .swiper-slide {
+        width: 45%; /* Два слайда в ряд */
+    }
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 768px) {
+    .swiper-container {
+        width: 100%; /* Занимает всю ширину контейнера */
+        margin: 0 auto; /* Центрирование */
+        overflow: hidden;
+        position: relative;
+    }
+    .swiper-slide {
+        width: 100%; /* Один слайд в ряд */
+    }
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 425px) {
+    .swiper-slide {
+        width: 100%; /* Один слайд в ряд */
+    }
+}
+
+/* privacy style */
+.privacy_policy-container {
+    max-width: 1232px; /* Максимальная ширина */
+    width: calc(100% - 40px); /* Плавное уменьшение с отступами по бокам */
+    margin: 0 auto; /* Центрирование */
+    padding: 0 20px; /* Отступы внутри контейнера */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.privacy_policy-container h1{
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: 140%;
+    color: #000;
+    margin-bottom: 3.4rem;
+}
+
+.privacy_policy-container h2{
+    font-weight: 300;
+    font-size: 2.5rem;
+    line-height: 140%;
+    color: #000;
+    margin: 3rem 0 3rem;
+}
+
+.privacy_policy-container li{
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 140%;
+    color: #000;
+}
+
+.privacy_policy-container p{
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 140%;
+    color: #000;
+}
+
+.privacy_policy{
+    padding: 4rem 0;
+}
+
+
+@media (max-width: 1000px){
+
+
+    .privacy_policy-container h1{
+        font-size: 2.5rem;
+    }
+
+    .privacy_policy-container h2{
+        font-size: 2rem;
+    }
+
+    .privacy_policy-container li{
+        font-size: 1.6rem;
+    }
+
+    .privacy_policy-container p{
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 500px){
+
+    .privacy_policy-container h1{
+        font-size: 2rem;
+    }
+
+    .privacy_policy-container h2{
+        font-size: 1.5rem;
+    }
+
+    .privacy_policy-container li{
+        font-size: 1.1rem;
+    }
+
+    .privacy_policy-container p{
+        font-size: 1.1rem;
+    }
+}
+
+
