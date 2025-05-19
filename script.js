@@ -1,3 +1,15 @@
+// Простая валидация форм
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', function(e) {
+    const checkbox = this.querySelector('.privacy-checkbox input');
+    if (checkbox && !checkbox.checked) {
+      e.preventDefault();
+      alert('Для продолжения необходимо принять политику конфиденциальности');
+      checkbox.focus();
+    }
+  });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Скрипт загружен!'); // Проверка загрузки скрипта
 

@@ -1314,6 +1314,30 @@ textarea:focus {
     }
 }
 
+/* Стили для чекбоксов согласия */
+.privacy-checkbox {
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.privacy-checkbox input {
+  margin-right: 0.75rem;
+  min-width: 1.1rem;
+  min-height: 1.1rem;
+}
+
+.privacy-checkbox a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  transition: opacity 0.3s;
+}
+
+.privacy-checkbox a:hover {
+  opacity: 0.8;
+}
+
 /* Стили для модальных окон */
 .modal {
     display: none;
