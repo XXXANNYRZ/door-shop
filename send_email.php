@@ -63,23 +63,19 @@ try {
     $mail->Encoding = 'base64';
 
     // Отправитель/получатель
-    $mail->setFrom($smtpConfig['username'], 'Door Shop');
+    $mail->setFrom('dimarj2005@yandex.ru', 'Test');
     $mail->addAddress('dimarj2005@gmail.com');
 
     // Тема письма
     $mail->Subject = "Новая заявка: $formType";
 
     // HTML-версия письма
-    $mail->isHTML(true);
-    $mail->Body = "
-        <h2 style='color:#2c3e50;'>Новая заявка</h2>
-        <div style='font-family:Arial,sans-serif;'>
-            <p><strong style='color:#3498db;'>Тип формы:</strong> $formType</p>
-            <p><strong style='color:#3498db;'>Имя:</strong> $name</p>
-            " . ($phone ? "<p><strong style='color:#3498db;'>Телефон:</strong> $phone</p>" : "") . "
-            " . ($email ? "<p><strong style='color:#3498db;'>Email:</strong> $email</p>" : "") . "
-            " . ($comment ? "<p><strong style='color:#3498db;'>Комментарий:</strong><br>" . nl2br($comment) . "</p>" : "") . "
-        </div>";
+   $mail->isHTML(false); // Отключить HTML
+$mail->Body = "Новая заявка\n\n"
+    . "Имя: $name\n"
+    . "Телефон: $phone\n"
+    . "Email: $email\n"
+    . "Комментарий: $comment";
 
     // Текстовая версия для почтовых клиентов
     $mail->AltBody = "Новая заявка\n\n"
@@ -92,7 +88,7 @@ try {
     // Дополнительные заголовки
     $mail->addCustomHeader('X-Priority', '1');
     $mail->addCustomHeader('X-Mailer', 'PHP Mailer');
-
+$mail->SMTPDebug = SMTP::DEBUG_SERVER; // Add before send()
     $mail->send();
     echo json_encode(['success' => true]);
 } catch (Exception $e) {

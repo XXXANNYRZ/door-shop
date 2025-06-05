@@ -385,7 +385,7 @@ main {
 .hero {
     position: relative;
     height: 100vh;
-    background-image: url('images/main_background.jpg');
+    background-image: url('images/main_bg_6.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -419,7 +419,7 @@ main {
 /* Герой-секция - адаптив */
 @media (max-width: 1000px) {
     .hero {
-        height: 40rem;
+        height: 100vh;
     }
 
     .appellation{
@@ -608,7 +608,7 @@ main {
 @media (max-width: 1000px) {
     .products-section,
     .services-section {
-        padding: 0 2rem;
+        padding: 1rem 2rem;
         height: 40rem;
     }
 
@@ -999,7 +999,6 @@ main {
     background-image: url('images/products_bg.png');
     padding: 0.625rem 1.25rem; /* 10px 20px */
     text-align: center;
-    height: 30rem; /* 480px */
 }
 
 .contact-form-section h2 {
@@ -1068,11 +1067,17 @@ textarea:focus {
     box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.1); /* Легкая тень при фокусе */
 }
 
+@media (max-width: 1000px) {
+
+    .contact-form-section h2{
+        font-size: 1.75rem;
+    }
+}
 /* Адаптация для маленьких экранов */
 @media (max-width: 768px) {
 
     .contact-form-section{
-        height: 35rem;
+        height: 38rem;
     }
 
     .input-row {
@@ -1187,7 +1192,7 @@ textarea:focus {
 
     .contact-info {
         width: 100%; /* Занимает всю ширину */
-        padding: 1.5rem; /* Уменьшаем отступы */
+        padding: 0.5rem; /* Уменьшаем отступы */
     }
 
     .contact-map {
@@ -1349,6 +1354,10 @@ textarea:focus {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.order_title{
+    padding-bottom: 1rem;
 }
 
 .modal-content {
@@ -1557,7 +1566,7 @@ textarea:focus {
     font-weight: 300;
     font-size: 3rem;
     line-height: 140%;
-    color: #000;
+    color: #000000;
     margin-bottom: 3.4rem;
 }
 

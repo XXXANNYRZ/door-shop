@@ -187,3 +187,104 @@ Array
     [form_type] => call-form
 )
 
+[2025-05-29 21:31:24] - Новый запрос
+Array
+(
+    [name] => Иван
+    [phone] => пвапвапва
+    [form_type] => call-form
+)
+
+[2025-05-29 22:23:40] - Новый запрос
+Array
+(
+    [name] => Дмитрий
+    [phone] => 89289057386
+    [form_type] => call-form
+)
+
+[2025-06-04 21:28:30] - Новый запрос
+Array
+(
+    [name] => Дмитрий
+    [email] => dimarj2005@gmail.com
+    [comment] => Классные двери, могу заказать парочку?
+    [form_type] => contact-form
+)
+
+[2025-06-05 14:11:05] - Новый запрос
+Array
+(
+    [name] => Дмитрий
+    [phone] => 89289057386
+    [form_type] => call-form
+)
+
+[2025-06-05 14:34:38] - Новый запрос
+Array
+(
+    [name] => Дмитрий
+    [phone] => 89289057386
+    [email] => dimarj2005@gmail.com
+    [form_type] => order-form
+)
+
+[2025-06-05 14:34:52] - Новый запрос
+Array
+(
+    [name] => Дмитрий
+    [phone] => 89289057386
+    [form_type] => consult-form
+)
+
+[2025-06-05 14:35:04] - Новый запрос
+Array
+(
+    [name] => Дмитрий
+    [phone] => 89289057386
+    [email] => dimarj2005@gmail.com
+    [form_type] => order-service-form
+)
+
+[2025-06-05 14:35:30] - Новый запрос
+Array
+(
+    [name] => Дмитрий
+    [email] => dimarj2005@gmail.com
+    [comment] => У вас классные двери
+    [form_type] => contact-form
+)
+
+[2025-06-05 21:09:51] - Новый запрос
+Array
+(
+    [name] => Дмитрий
+    [phone] => 89289057386
+    [form_type] => consult-form
+)
+
+[2025-06-05 21:10:45] - Новый запрос
+Array
+(
+    [name] => Игорь
+    [phone] => 88005553535
+    [form_type] => call-form
+)
+
+[2025-06-06 00:23:56] - Новый запрос
+Array
+(
+    [name] => Дмитрий
+    [phone] => 89289057386
+    [form_type] => call-form
+)
+
+[2025-06-06 00:24:16] - Новый запрос
+Array
+(
+    [name] => Дмитрий
+    [email] => dimarj2005@gmail.com
+    [comment] => Ghbdtdfgdfgdfsg
+    [form_type] => contact-form
+)
+
